@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #div {
+            font: normal 20px Arial;
+            background-color: rgb(59, 221, 59);
+            color: white;
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <h1 id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()">Interaja...</h1>
+    </div>
+
+    <script>
+        function clicar() {
+            let a = document.getElementById('area')
+            a.innerText = 'Clicou!'
+        }
+
+        function entrar() {
+            let a = document.getElementById('area')
+            a.style.background = 'blue'
+        }
+
+        function saiu() {
+            let a = document.getElementById('area')
+            a.style.background = 'rgb(59, 221, 59)'
+        }
+    </script>
+</body>
+</html>
