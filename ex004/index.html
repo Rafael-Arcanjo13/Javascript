@@ -19,22 +19,27 @@
 </head>
 <body>
     <div id="div">
-        <h1 id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()">Interaja...</h1>
+        <h1 id="area">Interaja...</h1>
     </div>
 
     <script>
+        let a = document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', saiu)
+
+
         function clicar() {
-            let a = document.getElementById('area')
             a.innerText = 'Clicou!'
         }
 
         function entrar() {
-            let a = document.getElementById('area')
+            a.innerText = 'Entrou!'
             a.style.background = 'blue'
         }
 
         function saiu() {
-            let a = document.getElementById('area')
+            a.innerText = 'Saiu!'
             a.style.background = 'rgb(59, 221, 59)'
         }
     </script>
